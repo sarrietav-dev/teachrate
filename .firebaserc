@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "teach-rate-dev": {
+      "hosting": {
+        "teachrate": [
+          "teach-rate-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "teach-rate-dev"
+  }
+}
