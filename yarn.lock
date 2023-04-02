@@ -2166,6 +2166,13 @@
   dependencies:
     "@types/node" "*"
 
+"@visurel/iconify-angular@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@visurel/iconify-angular/-/iconify-angular-11.0.0.tgz#6311538ca5c8b82b6e8240211ad3e604c71059d5"
+  integrity sha512-VaF0Zg0em3an3BnylxquJQATh7/Z34KG76dd85hvWXrm/FIv6q5yB8GAndUuTwTOU3CIRswsv6Lt15pdzk//xA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"
