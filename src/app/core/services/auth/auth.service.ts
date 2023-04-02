@@ -2,27 +2,30 @@ import { Injectable } from '@angular/core';
 import {
   Auth,
   GoogleAuthProvider,
+  User,
+  browserLocalPersistence,
   browserSessionPersistence,
   signInWithPopup,
+  user,
 } from '@angular/fire/auth';
-import { EMPTY, of, switchMap, tap } from 'rxjs';
+import { EMPTY, Observable, from, of, switchMap, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private auth: Auth) {}
+  user: Observable<User | null>;
 
-  loginWithGoogle() {
-    return of(this.auth.setPersistence(browserSessionPersistence)).pipe(
-      switchMap(() => signInWithPopup(this.auth, new GoogleAuthProvider())),
-      switchMap(() => {
-        return EMPTY;
-      })
-    );
+  constructor(private auth: Auth) {
+    this.auth.setPersistence(browserLocalPersistence);
+    this.user = user(this.auth);
   }
 
-  isUserLoggedIn(): boolean {
-    return this.auth.currentUser ? true : false;
+  loginWithGoogle() {
+    return from(signInWithPopup(this.auth, new GoogleAuthProvider()));
+  }
+
+  isUserLoggedIn(): Observable<boolean> {
+    return this.user.pipe(switchMap((user) => (user ? of(true) : EMPTY)));
   }
 }

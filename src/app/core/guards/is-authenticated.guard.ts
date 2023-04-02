@@ -6,7 +6,7 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of, switchMap, tap } from 'rxjs';
 import { AuthService } from '../services/auth/auth.service';
 
 @Injectable({
@@ -23,10 +23,12 @@ export class IsAuthenticatedGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.authService.isUserLoggedIn()) {
-      return true;
-    }
-    this.router.navigate(['/login']);
-    return false;
+    return this.authService.isUserLoggedIn().pipe(
+      tap((isLoggedIn) => {
+        if (!isLoggedIn) {
+          this.router.navigate(['login']);
+        }
+      })
+    );
   }
 }
