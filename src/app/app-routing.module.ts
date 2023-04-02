@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./pages/login/feed/feed.module').then((m) => m.FeedModule),
+      import('./pages/feed/feed.module').then((m) => m.FeedModule),
     canActivate: [IsAuthenticatedGuard],
   },
   {
