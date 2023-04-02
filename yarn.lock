@@ -1746,6 +1746,18 @@
     protobufjs "^7.0.0"
     yargs "^16.2.0"
 
+"@iconify/icons-fa6-brands@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-fa6-brands/-/icons-fa6-brands-1.2.10.tgz#627f8f0492e2e0dbed4123f291a0acf92f7efee7"
+  integrity sha512-DadamvCDolGPiPx1BflWHMWdVGt/eOhmUXZCcpUpRTR/aSGF7NXnCdlub/zy9UNqZ+43GbCh73qgSTrEWcLoBg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
