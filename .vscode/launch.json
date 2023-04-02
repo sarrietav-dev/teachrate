@@ -3,8 +3,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
-      "type": "pwa-chrome",
+      "name": "firefox",
+      "type": "firefox",
+      "request": "launch",
+      "profile": "dev",
+      "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200/"
+    },
+    {
+      "name": "edge",
+      "type": "msedge",
       "request": "launch",
       "preLaunchTask": "npm: start",
       "url": "http://localhost:4200/"
