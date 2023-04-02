@@ -7,4 +7,5 @@ export const environment = {
     authDomain: 'teach-rate-dev.firebaseapp.com',
     messagingSenderId: '753020012195',
     measurementId: 'G-5YRSHZQSWV',
-  },};
+  },
+};
