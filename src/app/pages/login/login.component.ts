@@ -12,6 +12,6 @@ export class LoginComponent {
   login() {
     this.authService
       .loginWithGoogle()
-      .subscribe(() => this.router.navigate(['feed']));
+      .subscribe(() => this.router.navigate(['']));
   }
 }
