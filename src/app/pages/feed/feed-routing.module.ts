@@ -6,6 +6,6 @@ const routes: Routes = [{ path: '', component: FeedComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class FeedRoutingModule { }
+export class FeedRoutingModule {}
