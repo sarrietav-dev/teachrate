@@ -4,11 +4,10 @@ import {
   GoogleAuthProvider,
   User,
   browserLocalPersistence,
-  browserSessionPersistence,
   signInWithPopup,
   user,
 } from '@angular/fire/auth';
-import { EMPTY, Observable, from, of, switchMap, tap } from 'rxjs';
+import { EMPTY, Observable, from, of, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
