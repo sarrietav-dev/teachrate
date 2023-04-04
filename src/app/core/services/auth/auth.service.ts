@@ -25,6 +25,6 @@ export class AuthService {
   }
 
   isUserLoggedIn(): Observable<boolean> {
-    return this.user.pipe(switchMap((user) => (user ? of(true) : EMPTY)));
+    return this.user.pipe(switchMap((user) => (user ? of(true) : of(false))));
   }
 }
