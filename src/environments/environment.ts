@@ -1,11 +1,11 @@
 export const environment = {
   firebase: {
-    projectId: 'teach-rate-dev',
-    appId: '1:753020012195:web:40e1dfd645ddf79a48e116',
-    storageBucket: 'teach-rate-dev.appspot.com',
-    apiKey: 'AIzaSyBaP0mYYS-HOOB-oMGGDKpaSA639uGgVhc',
-    authDomain: 'teach-rate-dev.firebaseapp.com',
-    messagingSenderId: '753020012195',
-    measurementId: 'G-5YRSHZQSWV',
+    apiKey: 'AIzaSyBl4fzqpfIyS2TVpUi9ZF2wFXNVOYn_sdw',
+    authDomain: 'teachrate-77c98.firebaseapp.com',
+    projectId: 'teachrate-77c98',
+    storageBucket: 'teachrate-77c98.appspot.com',
+    messagingSenderId: '919150994539',
+    appId: '1:919150994539:web:621de5e38590e9a265fd2e',
+    measurementId: 'G-V9Q0G6CR4J',
   },
 };
