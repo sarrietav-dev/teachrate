@@ -1,7 +1,7 @@
 <div class="mx-auto flex max-w-7xl flex-col items-stretch justify-center p-5">
   <feed-search class="mb-7"></feed-search>
 
-  <div class="grid grid-cols-[1fr_minmax(0,_1fr)] gap-4">
+  <div class="grid grid-cols-[1fr_minmax(0,_1fr)] items-stretch gap-4">
     <feed-review [review]="review" *ngFor="let review of reviews"></feed-review>
   </div>
 </div>
