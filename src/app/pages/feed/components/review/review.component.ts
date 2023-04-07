@@ -7,7 +7,7 @@ import { Review } from 'src/models/review';
   styles: [
     `
     :host {
-      @apply rounded-md border border-black bg-white;
+      @apply rounded-md border border-black bg-white h-52 overflow-hidden flex flex-col;
     }
   `,
   ],

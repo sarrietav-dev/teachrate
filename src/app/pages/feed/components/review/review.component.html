@@ -1,9 +1,11 @@
-<header class="border-b px-8 py-4">
+<header class="border-b px-5 py-4">
   <h1 class="flex justify-between">
-    <span> Anonymous </span>
     <span> {{ stars }} </span>
   </h1>
 </header>
-<p class="px-8 py-6">
+<p class="line-clamp-3 overflow-clip text-ellipsis px-5 pt-3">
   {{ review.content }}
+</p>
+<p class="mt-auto px-5 py-3 text-right">
+  ~ <span> {{ review.createdAt | date : "short" }} </span>
 </p>

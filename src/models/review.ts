@@ -7,6 +7,7 @@ export type Review = {
   content: string;
   teacher: Omit<Teacher, 'subjects'>;
   subject: string;
+  createdAt: Date;
 };
 
 function createFakeReview(): Review {
@@ -19,6 +20,7 @@ function createFakeReview(): Review {
       name: faker.name.fullName(),
     },
     subject: faker.word.noun(),
+    createdAt: faker.date.past(),
   };
 }
 
