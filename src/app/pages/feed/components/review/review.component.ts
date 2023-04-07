@@ -6,10 +6,10 @@ import { Review } from 'src/models/review';
   templateUrl: './review.component.html',
   styles: [
     `
-    :host {
-      @apply rounded-md border border-black bg-white h-52 overflow-hidden flex flex-col;
-    }
-  `,
+      :host {
+        @apply flex h-52 flex-col overflow-hidden rounded-md border border-black bg-white;
+      }
+    `,
   ],
 })
 export class ReviewComponent {
