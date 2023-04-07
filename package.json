@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@iconify/icons-fa6-brands": "^1.2.10",
+    "@iconify/icons-material-symbols": "^1.2.34",
     "@visurel/iconify-angular": "^11.0.0",
     "karma-mocha-reporter": "^2.2.5",
     "rxjs": "~7.8.0",

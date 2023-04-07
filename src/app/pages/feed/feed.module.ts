@@ -5,9 +5,10 @@ import { FeedRoutingModule } from './feed-routing.module';
 import { FeedComponent } from './feed.component';
 import { SearchComponent } from './components/search/search.component';
 import { ReviewComponent } from './components/review/review.component';
+import { IconModule } from '@visurel/iconify-angular';
 
 @NgModule({
   declarations: [FeedComponent, SearchComponent, ReviewComponent],
-  imports: [CommonModule, FeedRoutingModule],
+  imports: [CommonModule, FeedRoutingModule, IconModule],
 })
 export class FeedModule {}
