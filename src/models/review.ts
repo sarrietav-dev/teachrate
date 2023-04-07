@@ -4,6 +4,6 @@ export type Review = {
   id: string;
   rating: number;
   content: string;
-  teacher: Exclude<Teacher, 'subjects'>;
+  teacher: Omit<Teacher, 'subjects'>;
   subject: string;
 };
