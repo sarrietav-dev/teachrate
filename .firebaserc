@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "teach-rate-dev": {
+      "hosting": {
+        "teachrate": [
+          "teach-rate-dev"
+        ]
+      }
+    },
+    "teachrate-77c98": {
+      "hosting": {
+        "teachrate": [
+          "teachrate-77c98"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "teachrate-77c98"
+  }
+}
