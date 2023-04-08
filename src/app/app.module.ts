@@ -9,6 +9,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { LoginComponent } from './pages/login/login.component';
 import { IconModule } from '@visurel/iconify-angular';
+import { connectAuthEmulator } from '@angular/fire/auth';
+import { connectFirestoreEmulator } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -17,8 +19,22 @@ import { IconModule } from '@visurel/iconify-angular';
     AppRoutingModule,
     IconModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
+    provideAuth(() => {
+      const auth = getAuth();
+
+      if (!environment.production)
+        connectAuthEmulator(auth, 'http://localhost:9099');
+
+      return auth;
+    }),
+    provideFirestore(() => {
+      const firestore = getFirestore();
+
+      if (!environment.production)
+        connectFirestoreEmulator(firestore, 'localhost', 8080);
+
+      return firestore;
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
