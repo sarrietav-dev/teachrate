@@ -47,6 +47,6 @@ describe('LoginComponent', () => {
     const buttonDe = fixture.debugElement;
     const button = buttonDe.query(By.css('button'));
     button.triggerEventHandler('click', null);
-    expect(userService.loginWithGoogle).toHaveBeenCalled();
+    expect(userService.login).toHaveBeenCalled();
   });
 });

@@ -1,30 +1,28 @@
 import { Injectable } from '@angular/core';
-import {
-  Auth,
-  GoogleAuthProvider,
-  User,
-  browserLocalPersistence,
-  signInWithPopup,
-  user,
-} from '@angular/fire/auth';
-import { EMPTY, Observable, from, of, switchMap } from 'rxjs';
+import { Observable, of, switchMap, tap } from 'rxjs';
+import { User } from 'src/models/user';
+import { FirebaseAuthService } from '../firebase/firebase_auth/firebase-auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  user: Observable<User | null>;
+  user?: Observable<User>;
 
-  constructor(private auth: Auth) {
-    this.auth.setPersistence(browserLocalPersistence);
-    this.user = user(this.auth);
-  }
+  constructor(private auth: FirebaseAuthService) {}
 
-  loginWithGoogle() {
-    return from(signInWithPopup(this.auth, new GoogleAuthProvider()));
+  login() {
+    return this.auth.loginWithGoogle().pipe(
+      tap((user) => {
+        this.user = of(user);
+      })
+    );
   }
 
   isUserLoggedIn(): Observable<boolean> {
-    return this.user.pipe(switchMap((user) => (user ? of(true) : of(false))));
+    return (
+      this.user?.pipe(switchMap((user) => (user ? of(true) : of(false)))) ??
+      of(false)
+    );
   }
 }

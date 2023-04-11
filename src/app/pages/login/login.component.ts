@@ -13,8 +13,6 @@ export class LoginComponent {
   google = googleIcon;
 
   login() {
-    this.authService
-      .loginWithGoogle()
-      .subscribe(() => this.router.navigate(['']));
+    this.authService.login().subscribe(() => this.router.navigate(['']));
   }
 }
