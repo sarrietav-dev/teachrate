@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { AuthService } from './auth.service';
-import { FirebaseAuthService } from '../firebase/firebase_auth/firebase-auth.service';
+import { FirebaseAuthService } from '../firebase/firebase-auth.service';
 import { of } from 'rxjs';
 
 describe('AuthService', () => {

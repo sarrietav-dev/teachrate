@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap, tap } from 'rxjs';
 import { User } from 'src/models/user';
-import { FirebaseAuthService } from '../firebase/firebase_auth/firebase-auth.service';
+import { FirebaseAuthService } from '../firebase/firebase-auth.service';
 
 @Injectable({
   providedIn: 'root',
