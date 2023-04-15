@@ -7,9 +7,11 @@ import { FirebaseAuthService } from '../firebase/firebase-auth.service';
   providedIn: 'root',
 })
 export class AuthService {
-  user?: Observable<User>;
+  user?: Observable<User | null>;
 
-  constructor(private auth: FirebaseAuthService) {}
+  constructor(private auth: FirebaseAuthService) {
+    this.user = this.auth.getUser();
+  }
 
   login() {
     return this.auth.loginWithGoogle().pipe(

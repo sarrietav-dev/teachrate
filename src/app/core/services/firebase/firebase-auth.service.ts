@@ -3,9 +3,9 @@ import {
   Auth,
   GoogleAuthProvider,
   User as FirebaseUser,
-  browserLocalPersistence,
   signInWithPopup,
   user,
+  browserSessionPersistence,
 } from '@angular/fire/auth';
 import { Observable, from, mergeMap, of } from 'rxjs';
 import { User } from 'src/models/user';
@@ -14,10 +14,10 @@ import { User } from 'src/models/user';
   providedIn: 'root',
 })
 export class FirebaseAuthService {
-  user: Observable<FirebaseUser | null>;
+  private user: Observable<FirebaseUser | null>;
 
   constructor(private auth: Auth) {
-    this.auth.setPersistence(browserLocalPersistence);
+    this.auth.setPersistence(browserSessionPersistence);
     this.user = user(this.auth);
   }
 
@@ -29,6 +29,22 @@ export class FirebaseAuthService {
           name: user.user.displayName ?? undefined,
           email: user.user.email ?? '',
         } satisfies User);
+      })
+    );
+  }
+
+  getUser(): Observable<User | null> {
+    return this.user.pipe(
+      mergeMap((user) => {
+        if (user) {
+          return of({
+            id: user.uid,
+            name: user.displayName ?? undefined,
+            email: user.email ?? '',
+          } satisfies User);
+        } else {
+          return of(null);
+        }
       })
     );
   }
