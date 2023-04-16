@@ -1774,7 +1774,7 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify/types@*":
+"@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
   integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
@@ -2205,13 +2205,6 @@
   integrity sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==
   dependencies:
     "@types/node" "*"
-
-"@visurel/iconify-angular@^11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@visurel/iconify-angular/-/iconify-angular-11.0.0.tgz#6311538ca5c8b82b6e8240211ad3e604c71059d5"
-  integrity sha512-VaF0Zg0em3an3BnylxquJQATh7/Z34KG76dd85hvWXrm/FIv6q5yB8GAndUuTwTOU3CIRswsv6Lt15pdzk//xA==
-  dependencies:
-    tslib "^2.0.0"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -4141,6 +4134,13 @@ humanize-ms@^1.2.1:
   integrity sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==
   dependencies:
     ms "^2.0.0"
+
+iconify-icon@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/iconify-icon/-/iconify-icon-1.0.7.tgz#d7e1f5d45a88486abcc977583da62e6e9e635572"
+  integrity sha512-MxaO3Jhf3f5ymPWGHR9x74f90TNKcq1D+B2iGucGhVtqAgbC9EtM06kKiTGH2CKELNnexckwhrA3/+OpT4HKFw==
+  dependencies:
+    "@iconify/types" "^2.0.0"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"

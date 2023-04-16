@@ -8,7 +8,6 @@ import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { LoginComponent } from './pages/login/login.component';
-import { IconModule } from '@visurel/iconify-angular';
 import { connectAuthEmulator } from '@angular/fire/auth';
 import { connectFirestoreEmulator } from '@angular/fire/firestore';
 
@@ -17,7 +16,6 @@ import { connectFirestoreEmulator } from '@angular/fire/firestore';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IconModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => {
       const auth = getAuth();
