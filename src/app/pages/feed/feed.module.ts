@@ -9,7 +9,12 @@ import { DialogModule } from '@angular/cdk/dialog';
 import { CreateReviewDialogComponent } from './components/create-review-dialog/create-review-dialog.component';
 
 @NgModule({
-  declarations: [FeedComponent, SearchComponent, ReviewComponent, CreateReviewDialogComponent],
+  declarations: [
+    FeedComponent,
+    SearchComponent,
+    ReviewComponent,
+    CreateReviewDialogComponent,
+  ],
   imports: [CommonModule, FeedRoutingModule, DialogModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
